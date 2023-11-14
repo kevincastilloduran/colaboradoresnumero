@@ -1,4 +1,4 @@
-const URL = 'http://192.168.1.96/api/resource/Employee?fields=["employee_name","cell_number","emergency_phone_number"]'; //'https://api.thecatapi.com/v1/images/search';
+const URL = 'http://192.168.1.96/api/resource/Employee?fields=["employee_name","cell_number","emergency_phone_number"]&limit_start=0&limit_page_length=30'; //'https://api.thecatapi.com/v1/images/search';
 //const cors = require("cors");
 
 //app.use(cors({
@@ -27,7 +27,7 @@ function searchPage() {
 
     var _txtSearch = $("#search").val();
     
-    var _url_search = 'http://192.168.1.96/api/resource/Employee?fields=["employee_name","cell_number"]&filters=[["employee_name","like","%'+_txtSearch+'%"]]';
+    var _url_search = 'http://192.168.1.96/api/resource/Employee?fields=["employee_name","cell_number"]&filters=[["employee_name","like","%'+_txtSearch+'%"]]&limit_start=0&limit_page_length=30';
 
     fetch(_url_search,
         {
